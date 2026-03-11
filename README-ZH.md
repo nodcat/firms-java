@@ -38,7 +38,49 @@ nasa:
   area: 116.2,34.5,122,38
 ```
 
+## 示例
 
+```java
+package com.nodcat.satellite;
+
+import com.nodcat.satellite.enums.Satellite;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * @author nodcat
+ * @version 1.0
+ * @since 2026/2/24 上午8:19
+ */
+@Service
+public class CustomSatelliteServiceImpl implements CustomSatelliteService {
+    
+    
+    //当使用了配置文件时，可以使用自动注入
+    @Autowired
+    SatelliteClient satelliteClient;
+
+    //或者
+
+    //自定义进行客户端初始化
+//    static final SatelliteClient satelliteClient = new SatelliteClientImpl(
+//            new SatelliteClientProperties(
+//                    "35ece758e7525ad595b401b65fa1c83b", //mapKey
+//                    "116.2,34.5,122,38" //Area range
+//            ));
+    @Override
+    public List<SatelliteScanData> getSatelliteData() {
+        //获取日期2026-01-22，时间范围为5天的VIIRS_SNPP_NRT型号卫星数据
+        return satelliteClient.getSatelliteScanData(
+                Satellite.VIIRS_SNPP_NRT, 
+                "5", 
+                "2026-01-22");
+    }
+}
+
+```
 
 
 
