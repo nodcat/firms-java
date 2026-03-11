@@ -16,7 +16,6 @@ public interface SatelliteClient {
 
     //https://firms.modaps.eosdis.nasa.gov/api/kml_fire_footprints/canada/24h/landsat/FirespotArea_canada_landsat_24h.kmz
 
-
     /**
      * 请求并获取密钥,若未获取过会发送到您的邮箱
      * @param email 邮箱地址

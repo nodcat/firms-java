@@ -99,10 +99,12 @@ public class SatelliteClientImpl implements SatelliteClient {
      */
     @Override
     public List<SatelliteScanData> getSatelliteScanData(Satellite satellite, String mapKey, String area, String dayRange, String date) {
+
         List<SatelliteScanData> resultList;
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             String prefix = UrlType.AREA.getPrefix();
             String fullUrl = String.format(prefix, mapKey, satellite.getCode(), area, dayRange, date);
+            System.err.println(fullUrl);
             //构建URL.b.b//b
             URL url = new URL(REQUEST_URL,fullUrl);
             //构建Get对象
