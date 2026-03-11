@@ -19,6 +19,6 @@ public class CustomSatelliteServiceImpl implements CustomSatelliteService {
 
     @Override
     public List<SatelliteScanData> getSatelliteData() {
-        return satelliteClient.getSatelliteScanData(Satellite.VIIRS_SNPP_NRT, "1", "2026-01-22");
+        return satelliteClient.getSatelliteScanData(Satellite.VIIRS_SNPP_NRT, "7", "2026-01-22");
     }
 }
