@@ -43,7 +43,7 @@ nasa:
 ```java
 package com.nodcat.satellite;
 
-import com.nodcat.satellite.enums.Satellite;
+import io.github.nodcat.enums.Satellite;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
