@@ -1,7 +1,8 @@
 package com.nodcat.satellite;
 
-import com.nodcat.satellite.enums.*;
-import com.nodcat.satellite.error.SatelliteClientException;
+import io.github.nodcat.enums.*;
+import io.github.nodcat.error.SatelliteClientException;
+import io.github.nodcat.*;
 import org.junit.Test;
 
 import java.io.File;

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>firms-java</artifactId>
-        <groupId>com.nodcat.satellite</groupId>
+        <groupId>io.github.nodcat</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -20,7 +20,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.nodcat.satellite</groupId>
+            <groupId>io.github.nodcat</groupId>
             <artifactId>satellite-core</artifactId>
             <version>${satellite-core.version}</version>
         </dependency>

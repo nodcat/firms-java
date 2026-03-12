@@ -41,4 +41,45 @@ nasa:
   # Latitude and longitude range
   area: 116.2,34.5,122,38
 ````
+## Examples
 
+```java
+package com.nodcat.satellite;
+
+import io.github.nodcat.enums.Satellite;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * @author nodcat
+ * @version 1.0
+ * @since 24 Feb 2026 08:19 AM
+ */
+@Service
+public class CustomSatelliteServiceImpl implements CustomSatelliteService {
+    
+    
+    // When the configuration file is used, autowiring can be applied
+    @Autowired
+    SatelliteClient satelliteClient;
+
+    // Or
+
+    // Customize client initialization
+//    static final SatelliteClient satelliteClient = new SatelliteClientImpl(
+//            new SatelliteClientProperties(
+//                    "35ece758e7525ad595b401b65fa1c83b", // mapKey
+//                    "116.2,34.5,122,38" // Area range (longitude/latitude)
+//            ));
+    
+    @Override
+    public List<SatelliteScanData> getSatelliteData() {
+        // Get VIIRS_SNPP_NRT satellite data for 5 days starting from 2026-01-22
+        return satelliteClient.getSatelliteScanData(
+                Satellite.VIIRS_SNPP_NRT, 
+                "5", 
+                "2026-01-22");
+    }
+}
