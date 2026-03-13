@@ -5,11 +5,11 @@
     <parent>
         <artifactId>firms-java</artifactId>
         <groupId>io.github.nodcat</groupId>
-        <version>1.0</version>
+        <version>1.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>firms-spring</artifactId>
+    <artifactId>satellite-spring</artifactId>
     <packaging>jar</packaging>
 
     <name>satellite-spring</name>
@@ -24,7 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>io.github.nodcat</groupId>
-            <artifactId>firms-core</artifactId>
+            <artifactId>satellite-core</artifactId>
             <version>${satellite-core.version}</version>
         </dependency>
         <dependency>
