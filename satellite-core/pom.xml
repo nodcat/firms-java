@@ -12,6 +12,8 @@
     <artifactId>satellite-core</artifactId>
     <packaging>jar</packaging> <!-- 显式声明打包类型 -->
 
+    <name>satellite-core</name>
+
     <!-- 删除冗余的编译属性（继承父模块） -->
 
     <dependencies>
@@ -35,6 +37,7 @@
 
     <build>
         <plugins>
+
             <!-- 声明使用编译插件（继承父pom的配置） -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
