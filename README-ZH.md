@@ -90,7 +90,7 @@ public class CustomSatelliteServiceImpl implements CustomSatelliteService {
 <dependency>
     <groupId>io.github.nodcat</groupId>
     <artifactId>satellite-core</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 ### Spring
@@ -98,7 +98,7 @@ public class CustomSatelliteServiceImpl implements CustomSatelliteService {
 <dependency>
     <groupId>io.github.nodcat</groupId>
     <artifactId>satellite-spring</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
